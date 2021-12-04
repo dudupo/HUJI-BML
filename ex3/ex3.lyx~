@@ -1,0 +1,587 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "David CLM"
+\font_sans "default" "David CLM"
+\font_typewriter "default" "David CLM"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+תאורטי
+\end_layout
+
+\begin_layout Standard
+תאורטי
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תרגיל
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1-2
+\numeric off
+.
+\end_layout
+
+\begin_layout Enumerate
+נגדיר את 
+\begin_inset Formula $Y$
+\end_inset
+
+ להיות המטריצה בה השורה ה
+\begin_inset Formula $i$
+\end_inset
+
+ ית מתאימה ל 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ ובאופן דומה נגדיר את 
+\begin_inset Formula $H$
+\end_inset
+
+ וביחס ל וקטורים 
+\begin_inset Formula $h\left(x_{i}\right)$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula 
+\begin{align*}
+\log\left(Y|\Theta,\sigma\right) & =\sum_{i}^{N}\log\mathcal{N}\left(y_{i}|\Theta^{\top}h\left(x_{i}\right),I\sigma^{2}\right)\\
+ & =\sum_{i}^{N}\frac{1}{2\sigma^{2}}\left\langle y_{i}-\Theta^{\top}h\left(x_{i}\right),y_{i}-\Theta^{\top}h\left(x_{i}\right)\right\rangle \\
+ & =\frac{1}{2\sigma^{2}}Tr\left(\left(Y-\Theta^{\top}H\left(x\right)\right)\left(Y-\Theta^{\top}H\left(x\right)\right)^{\top}\right)
+\end{align*}
+
+\end_inset
+
+הביטוי הזה נוח כי 
+\begin_inset Formula $Trace$
+\end_inset
+
+ היא פעולה לניארית ולכן 
+\begin_inset Formula $\frac{\partial}{\partial\alpha}Tr\left(f\right)=Tr\left(\frac{\partial}{\partial\alpha}f\right)$
+\end_inset
+
+ כלומר 
+\begin_inset Formula 
+\begin{align*}
+\nabla\log\left(Y|\Theta,\sigma\right) & =\frac{1}{\sigma^{2}}Tr\left(\nabla\left(Y-\Theta^{\top}H\left(x\right)\right)\left(Y-\Theta^{\top}H\left(x\right)\right)^{\top}\right)\\
+ & =\frac{1}{\sigma^{2}}Tr\left(\left(Y-\Theta^{\top}H\left(x\right)\right)H^{\top}\left(x\right)\right)\\
+ & \frac{1}{\sigma^{2}}Tr\left(YH^{\top}\left(x\right)-\Theta^{\top}H\left(x\right)H^{\top}\left(x\right)\right)=0
+\end{align*}
+
+\end_inset
+
+פתרון אחד אפשרי הוא ש- 
+\begin_inset Formula 
+\[
+Tr\left(H\left(x\right)H^{\top}\left(x\right)\Theta\right)=\sigma^{2}Tr\left(Y^{\top}H\left(x\right)\right)
+\]
+
+\end_inset
+
+או במילים אחרות ניתן להציג כל איבר על האלכסון של 
+\begin_inset Formula $H\left(x\right)H^{\top}\left(x\right)\Theta$
+\end_inset
+
+ כלהיות שווה ל לאיבר על האלכסון של 
+\begin_inset Formula $Y^{\top}H\left(x\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+נוכל כמובן, לשטח את 
+\begin_inset Formula $Y$
+\end_inset
+
+ כך שיהיה וקטור מהצורה 
+\begin_inset Formula $Y\in\mathbb{R}^{Nk\times1}$
+\end_inset
+
+ במקרה שכזה.
+ גם 
+\begin_inset Formula $\Theta\in\mathbb{R}^{pk\times1}$
+\end_inset
+
+ ונקבל בעיה רגרסיה פשוטה.
+ כמו במקרה הקודם.
+ נקבל כי 
+\begin_inset Formula $HH^{\top}$
+\end_inset
+
+ היא תיהיה מטריצת בלוקים ונוכל להציג את הפתרון הסופי כסכום של 
+\begin_inset Formula $k$
+\end_inset
+
+ פתרונות.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תרגילים
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3-4
+\end_layout
+
+\begin_layout Enumerate
+נשים לב כי העובדה שעבור סט 
+\begin_inset Formula $A=\left\{ x_{i}\right\} ^{N}$
+\end_inset
+
+ המטריצה 
+\begin_inset Formula $K\left(x_{i},x_{j}\right)$
+\end_inset
+
+ מתפרקת ל 
+\begin_inset Formula $f_{A}^{\top}\left(x_{i}\right)f_{A}\left(x_{j}\right)$
+\end_inset
+
+ נובעת ישירות מכך ש
+\begin_inset Formula $K$
+\end_inset
+
+ היא 
+\begin_inset Formula $PSD$
+\end_inset
+
+.
+ מאחר ו 
+\begin_inset Formula $K$
+\end_inset
+
+ סימטרית אז קיימת לה פירוק מהצורה 
+\begin_inset Formula $K=A^{\top}A$
+\end_inset
+
+ ולכן נגדיר את 
+\begin_inset Formula $f\left(x_{i}\right)=A^{\left(i\right)}$
+\end_inset
+
+ ואכן כל לראות ש 
+\begin_inset Formula $K_{ij}=A_{i}^{\top}A_{j}=f\left(x_{i}\right)^{\top}f\left(x_{j}\right)$
+\end_inset
+
+.
+ מכן כמובן כל לראות כי 
+\begin_inset Formula 
+\begin{align*}
+k_{1}\left(x,y\right)k_{2}\left(x,y\right) & =f^{\top}\left(x\right)f\left(y\right)g^{\top}\left(x\right)g\left(y\right)=\left(\sum_{i}f_{i}\left(x\right)f_{i}\left(y\right)\right)\left(\sum_{i}g_{i}\left(x\right)g_{i}\left(y\right)\right)\\
+ & =\sum_{i}\sum_{j}f_{i}\left(x\right)f_{i}\left(y\right)g_{j}\left(x\right)g_{j}\left(y\right)=\left(\sum e_{ij}f_{i}\left(x\right)g_{j}\left(x\right)\right)^{\top}\left(\sum e_{ij}f_{i}\left(y\right)g_{j}\left(y\right)\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נגדיר את 
+\begin_inset Formula $K_{\times}\left(x,y\right)=\left(\sum e_{ij}f_{i}\left(x\right)g_{j}\left(x\right)\right)^{\top}\left(\sum e_{ij}f_{i}\left(y\right)g_{j}\left(y\right)\right)$
+\end_inset
+
+ ובזה סיימנו.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תרגילים
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5-6-7
+\numeric off
+.
+\end_layout
+
+\begin_layout Enumerate
+נסתכל על סט הנקודות בגודל 
+\begin_inset Formula $2$
+\end_inset
+
+ 
+\begin_inset Formula $\left\{ x_{i}\right\} =\left\{ x,y\right\} $
+\end_inset
+
+ ) נקבע את 
+\begin_inset Formula $x,y$
+\end_inset
+
+ בסוף( ונראה כי 
+\begin_inset Formula $K\left(x_{i},x_{j}\right)$
+\end_inset
+
+ אינה 
+\begin_inset Formula $PSD$
+\end_inset
+
+.
+ המטריצה המתקבלת היא: 
+\begin_inset Formula 
+\[
+K\left(\left\{ x,y\right\} \right)=\left[\begin{array}{cc}
+e^{\left(x-x\right)^{2}} & e^{\left(x-y\right)^{2}}\\
+e^{\left(y-x\right)^{2}} & e^{\left(y-y\right)^{2}}
+\end{array}\right]=\left[\begin{array}{cc}
+1 & \xi\\
+\xi & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+נמצא את הע
+\begin_inset Quotes erd
+\end_inset
+
+ׂע ונקבל כי 
+\begin_inset Formula 
+\[
+det\left(K-\lambda I\right)=0\Rightarrow\left(1-\lambda\right)^{2}=\xi^{2}\Rightarrow\lambda=1\mp\xi=1\mp e^{\left(x-y\right)^{2}}
+\]
+
+\end_inset
+
+מאחר ו 
+\begin_inset Formula $e^{x^{2}}$
+\end_inset
+
+ אינה חסומה, נוכל לבחור 
+\begin_inset Formula $x,y$
+\end_inset
+
+ כך של 
+\begin_inset Formula $K$
+\end_inset
+
+ יהיה ע
+\begin_inset Quotes erd
+\end_inset
+
+ע שלילי בסתירה לכך שהיא 
+\begin_inset Formula $PSD$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+מתכונת כפל בקבוע אנו יודעים כי לכל קרנל 
+\begin_inset Formula $k$
+\end_inset
+
+ גם 
+\begin_inset Formula $c\cdot k$
+\end_inset
+
+ הוא קרנל לכל 
+\begin_inset Formula $c>0$
+\end_inset
+
+ מיצד שני.
+ נניח בשלילה שהטענה נכונה ונסתכל על 
+\begin_inset Formula $k-ck=\left(1-c\right)k$
+\end_inset
+
+ ל 
+\begin_inset Formula $c>1$
+\end_inset
+
+ כל שהוא.
+ יהיה 
+\begin_inset Formula $\left\{ x_{i}\right\} $
+\end_inset
+
+ סט של 
+\begin_inset Formula $n$
+\end_inset
+
+ נקודות.
+ קל ליראות כי 
+\begin_inset Formula 
+\[
+Tr\left(\left(1-c\right)K\left(\left\{ x_{i}\right\} \right)\right)=\left(1-c\right)Tr\left(K\left(\left\{ x_{i}\right\} \right)\right)
+\]
+
+\end_inset
+
+ מאחר ו 
+\begin_inset Formula $K\left(\left\{ x_{i}\right\} \right)$
+\end_inset
+
+ הוא 
+\begin_inset Formula $PSD$
+\end_inset
+
+ אז כל הע
+\begin_inset Quotes erd
+\end_inset
+
+ע שלו גדולים או שווים מ 
+\begin_inset Formula $0$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $Tr\left(K\left(\left\{ x_{i}\right\} \right)\right)\ge0$
+\end_inset
+
+ נבחר את 
+\begin_inset Formula $k$
+\end_inset
+
+ המקורי כך שהאישיוון יהיה חזק.
+ ונקבל מכאן ש 
+\begin_inset Formula $Tr\left(\left(1-c\right)K\left(\left\{ x_{i}\right\} \right)\right)\le0$
+\end_inset
+
+ כלומר ל 
+\begin_inset Formula $\left(1-c\right)K\left(\left\{ x_{i}\right\} \right)$
+\end_inset
+
+ יש ערך עצמי שלילי ולכן אינו 
+\begin_inset Formula $PSD$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+מגיע באופן מיידי.
+ סט של 
+\begin_inset Formula $\left\{ \left\{ x_{ia},x_{ib}\right\} _{i}\right\} ^{N}$
+\end_inset
+
+ נקודות מגדיר את 
+\begin_inset Formula $K_{k_{a}},K_{k_{b}}$
+\end_inset
+
+ וברור כי 
+\begin_inset Formula 
+\[
+K\left(x,x^{\prime}\right)=k\left(x,x^{\prime}\right)=k_{a}\left(x,x^{\prime}\right)+k_{b}\left(x,x^{\prime}\right)=K_{k_{a}}\left(x,x^{\prime}\right)+K_{k_{b}}\left(x,x^{\prime}\right)
+\]
+
+\end_inset
+
+ונקבל כי לכל 
+\begin_inset Formula $z\in\mathbb{R}^{N}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula 
+\[
+z^{\top}Kz=z^{\top}\left(K_{k_{a}}+K_{k_{b}}\right)z=z^{\top}K_{k_{a}}z+z^{\top}K_{k_{b}}z\ge0
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $K$
+\end_inset
+
+ היא גם 
+\begin_inset Formula $PSD$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תרגיל
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+8
+\numeric off
+: 
+\end_layout
+
+\begin_layout Standard
+זה כמובן פשוט, אנו יודעים כי 
+\begin_inset Formula 
+\begin{align*}
+P\left(y\right) & \sim\int P\left(y|\alpha\right)P\left(\alpha\right)=\int Gauss\left(K\alpha\right)P\left(\alpha\right)=\\
+ & =\int Gauss\left(y\right)P\left(\alpha^{-1}\left(y\right)\right)|\frac{d\alpha}{dy}|dy=\int Gauss\left(y\right)P\left(\alpha^{-1}\left(y\right)\right)|K^{-1}|dy
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
